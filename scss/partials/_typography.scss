@@ -1,0 +1,18 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Serif', serif;
+}
+
+a, a:visited, a:active{
+    color : $bluegreen;
+}
+a:hover{
+    color : $yellow;
+}
+
+a.btn.btn-primary, a.btn.btn-secondary{
+    color : $white;
+}

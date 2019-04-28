@@ -1,0 +1,11 @@
+.hello-box{
+    background-color: $green-semi;
+    margin-top: 80px;
+    box-shadow: $box-shadow;
+    color : $white;
+    padding: 20px;
+    
+    p{
+        color: $yellow;
+    }
+}
