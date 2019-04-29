@@ -40,7 +40,7 @@
             
                 <button id="myButton">Click Me!</button>
 
-                <div class="card-footer">
+                <div>
                         <input type="button" id="fade3" value="Toggle the 3rd box's Visibility">
                 </div>
 
