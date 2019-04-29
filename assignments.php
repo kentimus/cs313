@@ -9,7 +9,13 @@
             <div class="offset-md-6 col-md-6">
                 <div class="hello-box">
                     <h1>Assignments</h1>
-                    <p class="lead">Nothing here yet. Probably in a week or two.</p>
+                    <p class="lead">Not much here yet.</p>
+                    
+                    <h2>Team Work</h2>
+                    
+                    <ul>
+                        <a href="groupwork/week2.php">Week 2</a>
+                    </ul>
                 </div>
             </div>
         </div>
