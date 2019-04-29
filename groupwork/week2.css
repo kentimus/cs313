@@ -1,0 +1,40 @@
+body{
+    margin-top: 50px;
+}
+div.box{
+/*    border-radius: 10px;*/
+/*    border: 1px solid black;*/
+/*    width: 200px;*/
+/*    height: 150px;*/
+/*    margin: 20px;*/
+/*    float: left;*/
+/*    padding: 20px;*/
+}
+div.box:hover{
+    font-weight: 800;
+}
+div.first{
+    border-color: darkred;
+    background: red;
+    color:white;
+}
+div.second{
+    border-color: darkgreen;
+    background: green;
+    color:white;
+}
+div.third{
+    border-color: darkslateblue;
+    background: slateblue;
+    color:white;
+}
+button{
+    border-radius: 5px;
+    border: 1px solid black;
+    background: yellow;
+    color : blue;
+    clear: both;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+}
