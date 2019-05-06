@@ -1,0 +1,58 @@
+.hero {
+    min-height: 100vh; }
+.hero-box{
+    background-color : rgba(250,255,253,.7);
+    color : #6b4d33;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 20px;
+    border: 2px solid #6b4d33;
+}
+
+
+#hero-homepage {
+  background: url(../images/blue.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
+#hero-cart {
+  background: url(../images/pecorino_toscano.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
+#hero-checkout {
+  background: url(../images/banon.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
+
+.card{
+    margin: 0 5px;
+}
+.card-footer select.form-control{
+    width: 30%;
+    display: inline-block;
+    height: 40px;
+}
+.btn{
+    margin-top: -4px;
+}
+
+p.price{
+    font-weight: 800;
+}
+
+#limburger-success, #redhawk-success, #gorgonzola-success{
+    display: none;
+}
+
+.td-num{
+    text-align: right;
+}
+
+label{
+    margin: 0 0 -2px 0;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+footer{
+    padding-top: 5px;
+}

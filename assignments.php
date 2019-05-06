@@ -11,10 +11,15 @@
                     <h1>Assignments</h1>
                     <p class="lead">Not much here yet.</p>
                     
+                    <h2>Prove</h2>
+                    <ul>
+                        <li><a href="assignments/week3-shoppingcart/">Week 3 - Shopping Cart</a></li>
+                    </ul>
+                    
                     <h2>Team Work</h2>
                     
                     <ul>
-                        <a href="groupwork/week2.php">Week 2</a>
+                        <li><a href="groupwork/week2.php">Week 2</a></li>
                     </ul>
                 </div>
             </div>
