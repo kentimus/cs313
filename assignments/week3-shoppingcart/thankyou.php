@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$address = filter_input(INPUT_POST, 'address');
-$city    = filter_input(INPUT_POST, 'city');
-$state   = filter_input(INPUT_POST, 'state');
-$zip     = filter_input(INPUT_POST, 'zip');
+$address = htmlspecialchars(filter_input(INPUT_POST, 'address'));
+$city    = htmlspecialchars(filter_input(INPUT_POST, 'city'));
+$state   = htmlspecialchars(filter_input(INPUT_POST, 'state'));
+$zip     = htmlspecialchars(filter_input(INPUT_POST, 'zip'));
 
 if($address == '' || $city == '' || $state == '' || $zip == ''){ 
     // form not filled out correct, so send back to checkout page

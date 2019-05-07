@@ -2,8 +2,8 @@
 session_start();
 
 // validate inputs
-$cheese = filter_input(INPUT_POST, 'cheese');
-$quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
+$cheese =   htmlspecialchars(filter_input(INPUT_POST, 'cheese'));
+$quantity = htmlspecialchars(filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT));
 
 // if we already have this cheese in the cart, increment quantity
 // otherwise, add this cheese to the cart
