@@ -20,6 +20,7 @@
                     
                     <ul>
                         <li><a href="groupwork/week2.php">Week 2</a></li>
+                        <li><a href="groupwork/week3">Week 3</a></li>
                     </ul>
                 </div>
             </div>
