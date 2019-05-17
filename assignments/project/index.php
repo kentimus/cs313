@@ -21,6 +21,13 @@ catch (PDOException $ex)
   die();
 }
 
-echo "hello";
+foreach ($db->query('SELECT * FROM vocab_words') as $row)
+{
+  echo 'id: ' . $row['id'];
+  echo '<br> vocab_list_id: ' . $row['vocab_list_id'];
+  echo '<br> word: ' . $row['word'];
+  echo '<br> english_word: ' . $row['english_word'];
+  echo '<br><br>';
+}
 
 ?>
