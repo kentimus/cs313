@@ -19,8 +19,7 @@
     function getVocabListName($id){
         global $db;
         $query = "SELECT name FROM vocab_lists
-            id = :id
-            ORDER BY name";
+            WHERE id = :id";
         $statement = $db->prepare($query);
         $statement->bindValue(':id',$id);
         $statement->execute();
