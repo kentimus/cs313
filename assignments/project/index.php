@@ -15,7 +15,7 @@ $vocab_lists = getVocab_lists();
             <p>Pick a List!</p>
         </div>
         
-        <div class="card-deck">
+        <div class="card-columns">
         <? foreach($vocab_lists as $vl){ ?>
             <div class="card">
                 <img class="card-img-top" src="images/thumbs/<?=$vl['id'];?>.jpg" alt="<?=$vl['name'];?>">
