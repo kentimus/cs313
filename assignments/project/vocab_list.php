@@ -21,7 +21,7 @@ $vocab_words = getVocab_words($vocab_list_id);
             
             <ul>
             <? foreach($vocab_words as $vw){ ?>
-                <li><?=$vw['name'];?></li>
+                <li><?=$vw['word'];?></li>
             <? } ?>
             </ul>
         </div>
