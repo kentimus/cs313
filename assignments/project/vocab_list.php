@@ -8,7 +8,7 @@ include("db/vocab_words.php");
 include("db/vocab_lists.php");
 
 //$listname = getVocabListName($vocab_list_id);
-//$vocab_words = getVocab_words($vocab_list_id);
+$vocab_words = getVocab_words($vocab_list_id);
 
 
 ?>
