@@ -14,6 +14,7 @@
                     <h2>Prove</h2>
                     <ul>
                         <li><a href="assignments/week3-shoppingcart/">Week 3 - Shopping Cart</a></li>
+                        <li><a href="assignments/project/">Project</a></li>
                     </ul>
                     
                     <h2>Team Work</h2>
