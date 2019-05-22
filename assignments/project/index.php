@@ -9,6 +9,12 @@ $vocab_lists = getVocab_lists();
 
 <section class="container-fluid hero" id="hero-homepage">
     <div class="container">
+        
+        <div class="semi-bg">
+            <h1>Kent's Vocabulary Lists</h1>
+            <p>Pick a List!</p>
+        </div>
+        
         <div class="card-deck">
         <? foreach($vocab_lists as $vl){ ?>
             <div class="card">

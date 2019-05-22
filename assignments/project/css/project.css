@@ -8,3 +8,7 @@ section {
   background: url(../images/map.jpg);
   background-attachment: fixed;
   background-size: cover; }
+
+.semi-bg{
+    background-color : rgba(255,255,255,.8);
+}
