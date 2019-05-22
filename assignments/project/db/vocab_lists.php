@@ -15,4 +15,17 @@
         $statement->closeCursor();
         return $vocab_lists;
     }
+
+    function getVocabListName($id){
+        global $db;
+        $query = "SELECT name FROM vocab_lists
+            id = :id
+            ORDER BY name";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id',$id);
+        $statement->execute();
+        $row = $statement->fetch();
+        $statement->closeCursor();
+        return $row['name'];
+    }
 ?>
