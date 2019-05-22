@@ -6,7 +6,7 @@
             ORDER BY name";
         $statement = $db->prepare($query);
         $statement->bindValue(':vocab_list_id',$vocab_list_id);
-//        $statement->execute();
+        $statement->execute();
 //        $vocab_words = $statement->fetchAll();
 //        $statement->closeCursor();
 //        return $vocab_words;
