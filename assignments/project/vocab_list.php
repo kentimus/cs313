@@ -19,11 +19,20 @@ $vocab_words = getVocab_words($vocab_list_id);
         <div class="col-md-12">
             <h1><?=$listname;?></h1>
             
-            <ul>
-            <? foreach($vocab_words as $vw){ ?>
-                <li><?=$vw['word'];?></li>
-            <? } ?>
-            </ul>
+            <table>
+                <thead>
+                    
+                </thead>
+                <tbody>
+                <? foreach($vocab_words as $vw){ ?>
+                    <tr>
+                        <td><?=$vw['word'];?></td>
+                        <td><?=$vw['english_word'];?></td>
+                    </tr>
+                <? } ?>  
+                </tbody>
+            </table>
+            
         </div>
     </div>
 </div>
