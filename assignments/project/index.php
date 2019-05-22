@@ -10,7 +10,7 @@ $vocab_lists = getVocab_lists();
 <section class="container-fluid hero" id="hero-homepage">
     <div class="container">
         
-        <div class="semi-bg">
+        <div class="page-header">
             <h1>Kent's Vocabulary Lists</h1>
             <p>Pick a List!</p>
         </div>
