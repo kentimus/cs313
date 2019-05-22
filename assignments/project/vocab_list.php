@@ -19,7 +19,7 @@ $vocab_words = getVocab_words($vocab_list_id);
         <div class="col-md-12">
             <h1><?=$listname;?></h1>
             
-            <table>
+            <table class="table table-striped">
                 <thead>
                     
                 </thead>
