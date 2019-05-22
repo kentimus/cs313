@@ -12,8 +12,8 @@ $vocab_lists = getVocab_lists();
         <div class="card-deck">
         <? foreach($vocab_lists as $vl){ ?>
             <div class="card">
-                <div class="card-header"><img class="card-img-top" src="images/thumbs/<?=$vl['id'];?>.jpg" alt="<?=$vl['name'];?>"></div>
-                <div class="card-body"><a href="vocab_list.php?id=<?=$vl['id'];?>"><?=$vl['name'];?></a></div>
+                <img class="card-img-top" src="images/thumbs/<?=$vl['id'];?>.jpg" alt="<?=$vl['name'];?>">
+                <div class="card-body"><a class="stretched-link" href="vocab_list.php?id=<?=$vl['id'];?>"><?=$vl['name'];?></a></div>
             </div>
         <? } ?>
         </div>
