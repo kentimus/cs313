@@ -7,13 +7,25 @@ $vocab_list_id = $_GET['id'];
 include("db/vocab_words.php");
 include("db/vocab_lists.php");
 
-//$listname = getVocabListName($vocab_list_id);
+$listname = getVocabListName($vocab_list_id);
 $vocab_words = getVocab_words($vocab_list_id);
 
 
 ?>
 <? include("header.php"); ?>
 
-<? echo $vocab_list_id; ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1><?=$listname;?></h1>
+            
+            <ul>
+            <? foreach($vocab_words as $vw){ ?>
+                <li><?=$vw['name'];?></li>
+            <? } ?>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <? include("footer.php"); ?>
