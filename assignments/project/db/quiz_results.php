@@ -4,12 +4,12 @@
         $query = "SELECT count(id) as quiz_count
             FROM quiz_results
             WHERE user_id =  :user_id";
-        $statement = $db->prepare($query);
-        $statement->bindValue(':user_id', $user_id);
-        $statement->execute();
+//        $statement = $db->prepare($query);
+//        $statement->bindValue(':user_id', $user_id);
+//        $statement->execute();
         //$quiz_count = $statement->fetch();
-        $statement->closeCursor();
+//        $statement->closeCursor();
         //return $quiz_count;
-        echo "hello";
+        return "hello";
     }
 ?>
