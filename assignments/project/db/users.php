@@ -10,7 +10,9 @@ function verifyUser($username, $password){
     $statement->execute();
     $user = $statement->fetch();
     $statement->closeCursor();
-    echo "$user<br><br>";
+    echo "<pre>";
+    echo print_r($user);
+    echoh "</pre>";
     echo count($user);
     return true;
 }
