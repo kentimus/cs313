@@ -3,7 +3,7 @@ session_start();
 include("db_connect.php");
 $db = get_db();
 
-$vocab_list_id = $_GET['id'];
+$vocab_list_id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 include("db/vocab_words.php");
 include("db/vocab_lists.php");
@@ -19,7 +19,9 @@ $vocab_words = getVocab_words($vocab_list_id);
         <div class="col-md-12">
             <h1><?=$listname;?></h1>
             
-            <p>(Click on a card to see it's translation)</p>
+            <p>Click on a card to see it's translation.</p>
+            
+            <p>When you are ready to quiz yourself, click <a class="btn btn-primary" href="quiz.php?id=<?=$vocab_list_id;?>">quiz me!</a></p>
             
             <? foreach($vocab_words as $vw){ ?> 
                 <div class="flip-container">
