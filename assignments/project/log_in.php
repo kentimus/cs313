@@ -47,7 +47,6 @@ if(isset($_GET['error']) && $_GET['error'] == 'true'){
             </div>
             <div class="col-md-6">
                 <h2>New User Sign Up</h2>
-                <p>(does not work yet!)</p>
                 <form action="do_sign_up.php" method="post">
                     <p>
                         <label for="signupform-username">Username</label>
