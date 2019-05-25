@@ -10,10 +10,12 @@ function verifyUser($username, $password){
     $statement->execute();
     $user = $statement->fetch();
     $statement->closeCursor();
-    if(count($user) > 0){
-        echo print_r($user);
+    if(count($user) > 1){
+//        echo print_r($user);
+        echo "good"
     } else {
-        echo "bad";
+        echo print_r($user);
+//        echo "bad";
     }
     return $user;
 }
