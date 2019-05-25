@@ -8,7 +8,7 @@
         <ul class="navbar-nav ml-auto">
       
         <? 
-        if(isset($_SESSION['username']) $_SESSION['username'] !== null){
+        if(isset($_SESSION['username']) && $_SESSION['username'] !== null){
         ?>
             <li class="nav-item">
                 <a class="nav-link" href="account.php">$_SESSION['username']</a>
