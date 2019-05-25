@@ -17,10 +17,6 @@ if(verifyUser($username, $password)){
     $_SESSION['logged_in'] = false;
 }
 
-
-
-
-
-echo "<p>" . $_SESSION['username'] . "</p>";
+header("Location: index.php");
 
 ?>
