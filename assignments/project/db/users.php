@@ -12,7 +12,7 @@ function verifyUser($username, $password){
     $statement->closeCursor();
     if(count($user) > 1){
 //        echo print_r($user);
-        echo "good"
+        echo "good";
     } else {
         echo print_r($user);
 //        echo "bad";
