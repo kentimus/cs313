@@ -4,8 +4,8 @@ include("db_connect.php");
 $db = get_db();
 
 include("db/quiz_results");
-$quiz_count = get_quiz_result_count($user_id);
-
+//$quiz_count = get_quiz_result_count($user_id);
+$quiz_count['quiz_count'] = 2;
 ?>
 <? include("header.php"); ?>
 <section class="container-fluid">
