@@ -11,7 +11,7 @@
         if(isset($_SESSION['username']) && $_SESSION['username'] !== null){
         ?>
             <li class="nav-item">
-                <a class="nav-link" href="account.php">$_SESSION['username']</a>
+                <a class="nav-link" href="account.php"><?=$_SESSION['username'];?></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="log_out.php">Log-out</a>
