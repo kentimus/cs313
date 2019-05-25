@@ -16,12 +16,21 @@ section {
 }
 
 
+
+
+
+
+
 .flip-container {
   perspective: 1000;
   margin: 10px;
   float: left;
   cursor: pointer;
-  }
+  /*  &:hover{
+    .flippable {
+      transform: rotateY(180deg);
+    }
+  }*/
 }
 .flip-container .flippable {
   transition: 0.5s;
