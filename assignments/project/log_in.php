@@ -62,7 +62,7 @@ if(isset($_GET['error']) && $_GET['error'] == 'true'){
                         <input type="password" class="form-control" id="signupform-password" name="password">
                     </p>
                     <p>
-                        <input type="submit" class="btn btn-primary" value="signup">
+                        <input type="submit" class="btn btn-primary" value="sign up">
                     </p>
                 </form>
             </div>
