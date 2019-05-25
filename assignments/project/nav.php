@@ -8,7 +8,7 @@
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item">
-        <a class="nav-link" href="login.php">Log-in</a>
+        <a class="nav-link" href="log_in.php">Log-in</a>
       </li>
       
       

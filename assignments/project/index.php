@@ -1,4 +1,5 @@
 <? 
+session_start();
 include("db_connect.php");
 $db = get_db();
 include("db/vocab_lists.php");
