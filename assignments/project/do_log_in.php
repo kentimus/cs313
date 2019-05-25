@@ -11,12 +11,12 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
 if($user = verifyUser($username, $password)){
     $_SESSION['username']  = $username;
-    $_SESSION['userid']    = $user['id'];
+    $_SESSION['user']      = $user;
     $_SESSION['logged_in'] = true;
     header("Location: index.php");
 } else {
     $_SESSION['username']  = null;
-    $_SESSION['userid']    = null;
+    $_SESSION['user']      = null;
     $_SESSION['logged_in'] = false;
     header("Location: log_in.php?error=true");
 }
