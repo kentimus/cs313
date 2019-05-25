@@ -11,12 +11,9 @@ function verifyUser($username, $password){
     $user = $statement->fetch();
     $statement->closeCursor();
     if(count($user) > 1){
-//        echo print_r($user);
-        echo "good";
+        return true;
     } else {
-        echo print_r($user);
-//        echo "bad";
+        return false;
     }
-    return $user;
 }
 ?>
