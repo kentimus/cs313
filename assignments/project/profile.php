@@ -13,7 +13,8 @@ $quiz_count = get_quiz_result_count(1);
         <div class="row">
             <div class="col-md-12">
                 <h1>Your Profile</h1>
-                <? //$quiz_count['quiz_count']; ?>
+                <?=$quiz_count['quiz_count']; ?><p></p>
+                <?=$_SESSION['userid'];?>
             </div>
         </div>
     </div>

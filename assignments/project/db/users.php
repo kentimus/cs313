@@ -11,7 +11,7 @@ function verifyUser($username, $password){
     $user = $statement->fetch();
     $statement->closeCursor();
     if(count($user) > 1){
-        return true;
+        return $user;
     } else {
         return false;
     }
