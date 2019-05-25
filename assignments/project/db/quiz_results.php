@@ -7,8 +7,9 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':user_id', $user_id);
         $statement->execute();
-        $quiz_count = $statement->fetch();
+        //$quiz_count = $statement->fetch();
         $statement->closeCursor();
-        return $quiz_count;
+        //return $quiz_count;
+        echo "hello";
     }
 ?>
