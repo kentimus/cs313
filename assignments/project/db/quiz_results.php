@@ -9,6 +9,6 @@
         $statement->execute();
         $quiz_count = $statement->fetch();
         $statement->closeCursor();
-        return $vocab_words;
+        return $quiz_count;
     }
 ?>
