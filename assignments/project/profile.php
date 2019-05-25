@@ -3,7 +3,7 @@ session_start();
 include("db_connect.php");
 $db = get_db();
 
-include("db/quiz_results");
+include("db/quiz_results.php");
 $quiz_count = get_quiz_result_count(1);
 //$quiz_count['quiz_count'] = 2;
 ?>
