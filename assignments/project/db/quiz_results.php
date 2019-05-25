@@ -5,7 +5,7 @@
             FROM quiz_results
             WHERE user_id =  :user_id";
         $statement = $db->prepare($query);
-        $statement->bindValue(':user_id',$user_id);
+        $statement->bindValue(':user_id', $user_id);
         $statement->execute();
         $quiz_count = $statement->fetch();
         $statement->closeCursor();
