@@ -34,8 +34,8 @@ section {
 .flip-container,
 .front,
 .back {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   line-height: 100px;
   text-align: center;
   font-size: 40px;
