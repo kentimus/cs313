@@ -19,7 +19,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $user = verifyUser($username, $password);
 echo "<pre>";
 echo print_r($user);
-echo "</pre>"
+echo "</pre>";
 
 echo "<p>" . $_SESSION['username'] . "</p>";
 
