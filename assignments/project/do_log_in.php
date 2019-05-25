@@ -12,11 +12,13 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 if(verifyUser($username, $password)){
     $_SESSION['username'] = $username;
     $_SESSION['logged_in'] = true;
+    header("Location: index.php");
 } else {
     $_SESSION['username'] = null;
     $_SESSION['logged_in'] = false;
+    header("Location: log_in.php?error=true");
 }
 
-header("Location: index.php");
+
 
 ?>
