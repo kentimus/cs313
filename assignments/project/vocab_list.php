@@ -21,7 +21,7 @@ $vocab_words = getVocab_words($vocab_list_id);
             
             <? foreach($vocab_words as $vw){ ?> 
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flippable appcon ac-bicycle">
+                    <div class="flippable">
                         <div class="front">
                             <?=$vw['word'];?>
                         </div>
