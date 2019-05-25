@@ -43,8 +43,8 @@ section {
 .flip-container,
 .front,
 .back {
-  width: 200px;
-  height: 120px;
+  width: 220px;
+  height: 220px;
   line-height: 50px;
   text-align: center;
   font-size: 20px;
@@ -82,31 +82,4 @@ section {
   background: #052c44;
   border-color: #86cbf5;
 }
-.ac-car .front {
-  background: #18b755;
-}
-.ac-car .back {
-  background: #063016;
-  border-color: #7aeea7;
-}
-.ac-truck .front {
-  background: #f3b50b;
-}
-.ac-truck .back {
-  background: #614804;
-  border-color: #fbe19c;
-}
-.ac-umbrella .front {
-  background: #ef4809;
-}
-.ac-umbrella .back {
-  background: #5c1c03;
-  border-color: #fbb296;
-}
-.ac-plane .front {
-  background: #E82C0C;
-}
-.ac-plane .back {
-  background: #571004;
-  border-color: #f9a294;
-}
+

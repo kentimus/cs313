@@ -19,8 +19,10 @@ $vocab_words = getVocab_words($vocab_list_id);
         <div class="col-md-12">
             <h1><?=$listname;?></h1>
             
+            <p>(Click on a card to see it's translation)</p>
+            
             <? foreach($vocab_words as $vw){ ?> 
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flip-container">
                     <div class="flippable appcon ac-bicycle">
                         <div class="front">
                             <?=$vw['word'];?>
