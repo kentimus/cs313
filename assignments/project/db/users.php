@@ -13,7 +13,7 @@ function verifyUser($username, $password){
 //    echo "<pre>";
 //    echo print_r($user);
 //    echoh "</pre>";
-//    echo count($user);
+    echo count($user);
     return $user;
 }
 ?>

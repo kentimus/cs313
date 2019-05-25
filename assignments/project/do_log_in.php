@@ -16,11 +16,13 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 //    $_SESSION['logged_in'] = false;
 //}
 
-$user = verifyUser($username, $password);
-echo "<pre>";
-echo print_r($user);
-echo "</pre>";
+//$user = verifyUser($username, $password);
+//echo "<pre>";
+//echo print_r($user);
+//echo "</pre>";
 
-echo "<p>" . $_SESSION['username'] . "</p>";
+
+
+//echo "<p>" . $_SESSION['username'] . "</p>";
 
 ?>
