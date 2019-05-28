@@ -5,7 +5,7 @@ $db = get_db();
 include("db_functions.php");
 $scriptures  = getScriptures();
 for($i=0; $i<count($scriptures); $i++){
-    $scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
+    //$scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
 }
 ?>
 <!doctype html>
