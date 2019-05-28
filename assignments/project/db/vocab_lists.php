@@ -23,7 +23,6 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':id',$id);
         $statement->execute();
-        $row = $statement->fetch();
         $statement->closeCursor();
         return $row['name'];
     }

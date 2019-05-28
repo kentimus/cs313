@@ -35,7 +35,6 @@ $topics = getTopics();
                         <p>
                         <? foreach($topics as $t){ ?>
                             <label><input type="checkbox" name="topics[]" value="<?=$t['name'];?>"> <?=$t['name'];?></label><br>
-
                         <? } ?>
                         </p>
                         <p>
