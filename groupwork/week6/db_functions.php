@@ -60,4 +60,16 @@ function getTopicsForScripture($scripture_id){
     $statement->closeCursor();
     return $topics;
 }
+
+function addSTopic($topic){
+    global $db;
+    $query = "INSERT INTO topics
+        (name)
+        VALUES (:topic)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':topic',$topic);
+    $statement->execute();
+    $statement->closeCursor();
+    return $db->lastInsertId();
+}
 ?>
