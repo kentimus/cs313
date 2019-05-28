@@ -31,5 +31,5 @@ CREATE TABLE scriptures_topics(
     id SERIAL PRIMARY KEY NOT NULL,
     scripture_id INT NOT NULL REFERENCES scriptures(id),
     topic_id INT NOT NULL REFERENCES topics(id)
-)
+);
 
