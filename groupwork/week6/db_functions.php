@@ -37,4 +37,27 @@ function addScriptureTopic($scripture_id, $topic_id){
     $statement->closeCursor();
     return $db->lastInsertId();
 }
+
+function getScriptures(){
+    global $db;
+    $query = "SELECT * FROM scriptures";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $scriptures = $statement->fetchAll();
+    $statement->closeCursor();
+    return $scriptures;
+} 
+
+function getTopicsForScripture($scripture_id){
+    global $db;
+    $query = "SELECT topic.name FROM topics
+        LEFT JOIN scriptures_topics
+        ON scriptures_topics.topic_id = topics.id
+        WHERE scriptures_topics.scripture_id = $scripture_id";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $topics = $statement->fetchAll();
+    $statement->closeCursor();
+    return $topics;
+}
 ?>
