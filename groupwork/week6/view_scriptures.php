@@ -18,7 +18,7 @@ for($i=0; $i<count($scriptures); $i++){
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h1>Scriptures</h1>
                     
                     <div class="card-columns">
@@ -28,7 +28,8 @@ for($i=0; $i<count($scriptures); $i++){
                             <div class="card-body"><?=$s['content'];?></div>
                             <div class="card-footer">
                             <? foreach($s['topics'] as $t){ 
-                                echo "$t ";
+                                echo $t['name'];
+                                echo " ";
                             } ?>
                             </div>
                         </div>
