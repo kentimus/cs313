@@ -10,7 +10,7 @@ $data['verse']   = filter_var($_POST['verse'], FILTER_SANITIZE_STRING);
 $data['content'] = filter_var($_POST['content'], FILTER_SANITIZE_STRING);
 $topics  = $_POST['topics'];
 
-//$scripture_id = addScripture($data);
+$scripture_id = addScripture($data);
 //echo "<p>scripture id = $scripture_id </p>";
 echo "<pre>";
 echo print_r($topics);
