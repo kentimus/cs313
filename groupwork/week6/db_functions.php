@@ -40,7 +40,8 @@ function addScriptureTopic($scripture_id, $topic_id){
 
 function getScriptures(){
     global $db;
-    $query = "SELECT * FROM scriptures";
+    $query = "SELECT * FROM scriptures
+        ORDER BY id DESC";
     $statement = $db->prepare($query);
     $statement->execute();
     $scriptures = $statement->fetchAll();

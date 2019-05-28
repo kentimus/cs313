@@ -4,6 +4,11 @@ $db = get_db();
 
 include("db_functions.php");
 $topics = getTopics();
+
+$scriptures  = getScriptures();
+for($i=0; $i<count($scriptures); $i++){
+    $scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
+}
 ?>
 <!doctype html>
 <html>
@@ -40,9 +45,23 @@ $topics = getTopics();
                             <label><input type="checkbox" name="newtopic" value="checked"> <input type="text" name="newtopictext"></label>
                         </p>
                         <p>
-                            <input class="form-control" type="submit" value="add scripture">
+                            <input class="btn btn-primary" type="submit" value="add scripture">
                         </p>
                     </form>
+                </div>
+                <div class="col-md-6">
+                    <? foreach($scriptures as $s){ ?>
+                        <div class="card">
+                            <div class="card-header"><?=$s['book'];?> <?=$s['chapter'];?>:<?=$s['verse'];?></div>
+                            <div class="card-body"><?=$s['content'];?></div>
+                            <div class="card-footer">
+                            <? foreach($s['topics'] as $t){ 
+                                echo $t['name'];
+                                echo " ";
+                            } ?>
+                            </div>
+                        </div>
+                        <? } ?>
                 </div>
             </div>
         </div>
