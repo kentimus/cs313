@@ -19,9 +19,23 @@ for($i=0; $i<count($scriptures); $i++){
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <pre>
-                    <?=print_r($scriptures);?>
-                    </pre>
+                    <h1>Scriptures</h1>
+                    
+                    <div class="card-columns">
+                        <? foreach($scriptures as $s){ ?>
+                        <div class="card">
+                            <div class="card-header"><?=$s['book'];?> <?=$s['chapter'];?>:<?=$s['verse'];?></div>
+                            <div class="card-body"><?=$s['content'];?></div>
+                            <div class="card-footer">
+                            <? foreach($s['topics'] as $t){ 
+                                echo "$t ";
+                            } ?>
+                            </div>
+                        </div>
+                        <? } ?>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
