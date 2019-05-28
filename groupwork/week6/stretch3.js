@@ -7,7 +7,6 @@ $(document).ready(function(){
         var verse   = $("#verse").val();
         var content = $("#content").val();
         var topics  = $('.checkbox-topics:checked').serialize();
-        //var topics = "hello";
         var newtopic = $("#newtopic").is(':checked');
         var newtopictext = $("#newtopictext").val();
         
@@ -23,7 +22,5 @@ $(document).ready(function(){
                 $("#scripture-list").html(data);
             }, 'html'
         );
-        
-        alert("wie gehts!");
     });
 });

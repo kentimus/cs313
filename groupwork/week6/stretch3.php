@@ -24,19 +24,19 @@ for($i=0; $i<count($scriptures); $i++){
                     <form id="new-scripture-form" action="new_scripture.php" method="post">
                         <p>
                             <label for="book">Book</label>
-                            <input class="form-control" type="text" id="book" name="book">
+                            <input class="form-control" type="text" id="book" name="book" required>
                         </p>
                         <p>
                             <label for="chapter">Chapter</label>
-                            <input class="form-control" type="number" id="chapter" name="chapter">
+                            <input class="form-control" type="number" id="chapter" name="chapter" required>
                         </p>
                         <p>
                             <label for="verse">Verse</label>
-                            <input class="form-control" type="number" id="verse" name="verse">
+                            <input class="form-control" type="number" id="verse" name="verse" required>
                         </p>
                         <p>
                             <label for="content">Content</label>
-                            <textarea class="form-control" id="content" name="content"></textarea>
+                            <textarea class="form-control" id="content" name="content" required></textarea>
                         </p>
                         <p>
                         <? foreach($topics as $t){ ?>
