@@ -6,7 +6,8 @@ $(document).ready(function(){
         var chapter = $("#chapter").val();
         var verse   = $("#verse").val();
         var content = $("#content").val();
-        var topics  = $('.checkbox-topics:checked').serialize();
+        //var topics  = $('.checkbox-topics:checked').serialize();
+        var topics = "hello";
         var newtopic = $("#newtopic").val();
         var newtopictext = $("#newtopictext");
         
