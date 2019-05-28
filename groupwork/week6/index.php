@@ -37,6 +37,7 @@ $topics = getTopics();
                         <? foreach($topics as $t){ ?>
                             <label><input type="checkbox" name="topics[]" value="<?=$t['id'];?>"> <?=$t['name'];?></label><br>
                         <? } ?>
+                            <label><input type="checkbox" name="newtopic" value="checked"> <input type="text" name="newtopictext"></label>
                         </p>
                         <p>
                             <input class="form-control" type="submit" value="add scripture">
