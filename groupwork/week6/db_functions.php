@@ -25,7 +25,7 @@ function addScripture($data){
     return $db->lastInsertId();
 }
 
-function addScriptureTopic($scripture_id, $topid_id){
+function addScriptureTopic($scripture_id, $topic_id){
     global $db;
     $query = "INSERT INTO scriptures_topics
         (scripture_id, topic_id)
