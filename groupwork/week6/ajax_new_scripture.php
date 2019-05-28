@@ -8,3 +8,36 @@ parse_str($_POST['topics'], $params);
 ?>
 
 <pre><?=print_r($params);?></pre>
+
+
+<?
+include("db_connect.php");
+$db = get_db();
+
+include("db_functions.php");
+
+$data['book']    = filter_var($_POST['book'], FILTER_SANITIZE_STRING);
+$data['chapter'] = filter_var($_POST['chapter'], FILTER_SANITIZE_STRING);
+$data['verse']   = filter_var($_POST['verse'], FILTER_SANITIZE_STRING);
+$data['content'] = filter_var($_POST['content'], FILTER_SANITIZE_STRING);
+$topics = array();
+parse_str($_POST['topics'], $topics);
+$newtopic = $_POST['newtopic'];
+$newtopictext = filter_var($_POST['newtopictext'], FILTER_SANITIZE_STRING);
+
+if($newtopic == "true"){
+    echo "new topic";
+} else {
+    echo "no new topic";
+}
+
+//$scripture_id = addScripture($data);
+//
+//foreach($topics as $t){
+//    addScriptureTopic($scripture_id, $t);
+//}
+//if($newtopic == "checked"){
+//    $newTopicId = addSTopic($newtopictext);
+//    addScriptureTopic($scripture_id, $newTopicId);
+//}
+?>
