@@ -50,7 +50,7 @@ function getScriptures(){
 
 function getTopicsForScripture($scripture_id){
     global $db;
-    $query = "SELECT topic.name FROM topics
+    $query = "SELECT topics.name FROM topics
         LEFT JOIN scriptures_topics
         ON scriptures_topics.topic_id = topics.id
         WHERE scriptures_topics.scripture_id = $scripture_id";

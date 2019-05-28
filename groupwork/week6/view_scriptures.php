@@ -5,7 +5,7 @@ $db = get_db();
 include("db_functions.php");
 $scriptures  = getScriptures();
 for($i=0; $i<count($scriptures); $i++){
-    //$scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
+    $scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
 }
 ?>
 <!doctype html>
@@ -22,12 +22,6 @@ for($i=0; $i<count($scriptures); $i++){
                     <pre>
                     <?=print_r($scriptures);?>
                     </pre>
-                    
-                    <? for($i=0; $i<count($scriptures); $i++){
-    //$scriptures[$i]['topics'] = getTopicsForScripture($scriptures[$i]['id']);
-    echo $scriptures[$i]['id'];
-    echo "<br>";
-} ?>
                 </div>
             </div>
         </div>
