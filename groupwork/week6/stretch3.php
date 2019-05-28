@@ -40,7 +40,7 @@ for($i=0; $i<count($scriptures); $i++){
                         </p>
                         <p>
                         <? foreach($topics as $t){ ?>
-                            <label><input type="checkbox" name="topics[]" value="<?=$t['id'];?>"> <?=$t['name'];?></label><br>
+                            <label><input type="checkbox" class="checkbox-topics" name="topics[]" value="<?=$t['id'];?>"> <?=$t['name'];?></label><br>
                         <? } ?>
                             <label><input type="checkbox" name="newtopic" value="checked"> <input type="text" name="newtopictext"></label>
                         </p>
