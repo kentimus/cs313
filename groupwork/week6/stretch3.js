@@ -8,7 +8,7 @@ $(document).ready(function(){
         var content = $("#content").val();
         var topics  = $('.checkbox-topics:checked').serialize();
         //var topics = "hello";
-        var newtopic = $("#newtopic").val();
+        var newtopic = $("#newtopic").is(':checked');
         var newtopictext = $("#newtopictext").val();
         
         $.post('ajax_new_scripture.php', {
