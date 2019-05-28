@@ -24,12 +24,12 @@ $scripture_id = addScripture($data);
 
 foreach($topics as $t){
     echo "<p>$t</p>";
-    addScriptureTopic($scripture_id, $t);
+    //addScriptureTopic($scripture_id, $t);
 }
 if($newtopic == "true"){
     echo "new topic";
-    $newTopicId = addSTopic($newtopictext);
-    addScriptureTopic($scripture_id, $newTopicId);
+//    $newTopicId = addSTopic($newtopictext);
+//    addScriptureTopic($scripture_id, $newTopicId);
 } else {
     echo "no new topic";
 }
