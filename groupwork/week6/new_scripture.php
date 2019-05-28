@@ -23,5 +23,6 @@ if($newtopic == "checked"){
 }
 
 
-header("Location: view_scriptures.php");
+//header("Location: view_scriptures.php");
+header("Location: index.php");
 ?>
