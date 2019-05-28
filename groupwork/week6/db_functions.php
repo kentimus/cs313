@@ -22,7 +22,19 @@ function addScripture($data){
     $statement->bindValue(':content',$data['content']);
     $statement->execute();
     $statement->closeCursor();
-    echo $db->lastInsertId();
-    //return $statement->lastInsertId('scriptures_id_seq');
+    return $db->lastInsertId();
+}
+
+function addScriptureTopic($scripture_id, $topid_id){
+    global $db;
+    $query = "INSERT INTO scriptures_topics
+        (scripture_id, topic_id)
+        VALUES (:scripture_id, :topic_id)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':scripture_id',$scripture_id);
+    $statement->bindValue(':topic_id',$topic_id);
+    $statement->execute();
+    $statement->closeCursor();
+    return $db->lastInsertId();
 }
 ?>

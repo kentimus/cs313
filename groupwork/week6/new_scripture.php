@@ -11,8 +11,10 @@ $data['content'] = filter_var($_POST['content'], FILTER_SANITIZE_STRING);
 $topics  = $_POST['topics'];
 
 $scripture_id = addScripture($data);
-//echo "<p>scripture id = $scripture_id </p>";
-echo "<pre>";
-echo print_r($topics);
-echo "</pre>";
+
+foreach($topics as $t){
+    addScriptureTopic($scripture_id, $t);
+}
+
+header("Location: view_scriptures.php");
 ?>
