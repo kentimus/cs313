@@ -22,6 +22,7 @@ function addScripture($data){
     $statement->bindValue(':content',$data['content']);
     $statement->execute();
     $statement->closeCursor();
+    echo $db->lastInsertId();
     //return $statement->lastInsertId('scriptures_id_seq');
 }
 ?>
