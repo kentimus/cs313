@@ -23,17 +23,11 @@ $newtopictext = filter_var($_POST['newtopictext'], FILTER_SANITIZE_STRING);
 $scripture_id = addScripture($data);
 
 foreach($topics as $t){
-//    echo "<pre>";
-//    echo print_r($t);
-//    echo "</pre>";
     addScriptureTopic($scripture_id, $t[0]);
 }
 if($newtopic == "true"){
-    echo "new topic";
     $newTopicId = addSTopic($newtopictext);
     addScriptureTopic($scripture_id, $newTopicId);
-} else {
-    echo "no new topic";
 }
 
 //--------------------------------------
