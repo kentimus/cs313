@@ -42,7 +42,7 @@ for($i=0; $i<count($scriptures); $i++){
                         <? foreach($topics as $t){ ?>
                             <label><input type="checkbox" class="checkbox-topics" name="topics[]" value="<?=$t['id'];?>"> <?=$t['name'];?></label><br>
                         <? } ?>
-                            <label><input type="checkbox" name="newtopic" value="checked"> <input type="text" name="newtopictext"></label>
+                            <label><input id="newtopic" type="checkbox" name="newtopic" value="checked"> <input id="newtopictext" type="text" name="newtopictext"></label>
                         </p>
                         <p>
                             <input id="newscripture-submit" class="btn btn-primary" type="submit" value="add scripture">
