@@ -13,6 +13,9 @@ $vocab_list_id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $current_question = $_SESSION['vocab_words'][0];
 
+$correct_answer = $_SESSION['vocab_words'][0]['english_word'];
+
+
 
 include("header.php");
 ?>
@@ -24,7 +27,7 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <p>(doesn't work yet)</p>
+                <p><?=count($_SESSION['vocab_list'];?></p>
                 
                 <p>Translate:</p>
                 <p class="question"><?=$current_question['word'];?></p>
