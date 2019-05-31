@@ -43,8 +43,8 @@
     function getVocabListEnglishWords($id){
         global $db;
         $words = array();
-//        $query = "SELECT english_word FROM vocab_lists
-//            WHERE id = :id";
+        $query = "SELECT english_word FROM vocab_lists
+            WHERE id = :id";
 //        $statement = $db->prepare($query);
 //        $statement->bindValue(':id',$id);
 //        $statement->execute();
