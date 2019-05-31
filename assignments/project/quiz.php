@@ -27,7 +27,7 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <p><?=count($_SESSION['vocab_list']);?></p>
+                <p><?=count($_SESSION['vocab_words']);?></p>
                 
                 <p>Translate:</p>
                 <p class="question"><?=$current_question['word'];?></p>
