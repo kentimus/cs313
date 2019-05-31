@@ -37,7 +37,6 @@
         foreach($rows as $row){
             $words[] = $row['english_word'];
         }
-        echo print_r($rows);
         $statement->closeCursor();
         
         return $words;
