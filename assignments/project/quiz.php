@@ -17,6 +17,7 @@ $correct_answer = $_SESSION['vocab_words'][0]['english_word'];
 
 
 
+
 include("header.php");
 ?>
 
