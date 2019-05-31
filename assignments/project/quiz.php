@@ -26,7 +26,7 @@ do {
 } while ($answers[1] == $answers[0] || $answers[2] == $answers[0]);
 
 // randomize answers
-shuffle($answers)
+shuffle($answers);
 
 
 include("header.php");
