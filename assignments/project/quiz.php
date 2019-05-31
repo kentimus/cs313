@@ -25,6 +25,8 @@ do {
     $answers[2] = $_SESSION['word_list'][2];
 } while ($answers[1] == $answers[0] || $answers[2] == $answers[0]);
 
+// randomize answers
+shuffle($answers)
 
 
 include("header.php");
@@ -37,17 +39,15 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <pre><?=print_r($answers);?></pre>
-                <p><?=count($_SESSION['vocab_words']);?></p>
-                
                 <p>Translate:</p>
                 <p class="question"><?=$current_question['word'];?></p>
                 
-                <p>
-                    <a href="" class="btn btn-secondary"><?=$_SESSION['vocab_words'][0]['english_word'];?></a>
-                    <a href="" class="btn btn-secondary"><?=$_SESSION['vocab_words'][1]['english_word'];?></a>
-                    <a href="" class="btn btn-secondary"><?=$_SESSION['vocab_words'][2]['english_word'];?></a>
-                </p>
+                
+                <form action="checkanswer.php" method="post">
+                    <input class="btn btn-secondary" type="submit" name="answer" value="<?=$answers[0];?>">
+                    <input class="btn btn-secondary" type="submit" name="answer" value="<?=$answers[1];?>">
+                    <input class="btn btn-secondary" type="submit" name="answer" value="<?=$answers[2];?>">
+                </form>    
             </div>
         </div>
     </div>
