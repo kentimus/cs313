@@ -24,13 +24,13 @@
         return $vocab_words;
     } 
 
-    function getVocabListEnglishWords($id){
+    function getVocabListEnglishWords($vocab_list_id){
         global $db;
         $words = array();
         $query = "SELECT english_word FROM vocab_words
-            WHERE id = :id";
+            WHERE vocab_list_id = :vocab_list_id";
         $statement = $db->prepare($query);
-        $statement->bindValue(':id',$id);
+        $statement->bindValue(':vocab_list_id',$vocab_list_id);
         
         $statement->execute();
 //        //$vocab_list = $statement->fetch();
