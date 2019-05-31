@@ -55,7 +55,7 @@
         }
         $statement->closeCursor();
         
-        return $vocab_list;
+        //return $vocab_list;
     }
     
 ?>
