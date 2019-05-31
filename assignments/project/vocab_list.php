@@ -10,8 +10,6 @@ include("db/vocab_lists.php");
 
 $listname = getVocabListName($vocab_list_id);
 $vocab_words = getVocab_words($vocab_list_id);
-
-
 ?>
 <? include("header.php"); ?>
 <div class="container">
@@ -21,7 +19,7 @@ $vocab_words = getVocab_words($vocab_list_id);
             
             <p>Click on a card to see it's translation.</p>
             
-            <p>When you are ready to quiz yourself, click <a class="btn btn-primary" href="quiz.php?id=<?=$vocab_list_id;?>">quiz me!</a></p>
+            <p>When you are ready to quiz yourself, click <a class="btn btn-primary" href="startquiz.php?id=<?=$vocab_list_id;?>">quiz me!</a></p>
             
             <? foreach($vocab_words as $vw){ ?> 
                 <div class="flip-container">
