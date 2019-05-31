@@ -14,5 +14,5 @@ $_SESSION['vocab_list']  = getVocabList($vocab_list_id);
 $_SESSION['num_wrong'] = 0;
 $_SESSION['num_questions'] = 0;
 
-
+header("Location: quiz.php");
 ?>
