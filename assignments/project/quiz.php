@@ -15,7 +15,13 @@ $current_question = $_SESSION['vocab_words'][0];
 
 $correct_answer = $_SESSION['vocab_words'][0]['english_word'];
 
+// get two wrong answers from the word list
+$wrong1 = "";
+$wrong2 = "";
 
+do {
+  $wrong1 = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
+} while ($wrong1 == $correct_answer);
 
 
 include("header.php");
@@ -28,6 +34,7 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
+                <p><?=$wrong1;?></p>
                 <p><?=count($_SESSION['vocab_words']);?></p>
                 
                 <p>Translate:</p>
