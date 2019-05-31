@@ -34,7 +34,8 @@
         
         $statement->execute();
 //        //$vocab_list = $statement->fetch();
-        while($row = $statement->fetchAll()){
+        $rows = $statement->fetchAll();
+        foreach($rows as $row){
             echo $row['english_word'];
             echo "<br>";
         }
