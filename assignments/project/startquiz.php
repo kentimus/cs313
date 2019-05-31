@@ -9,9 +9,10 @@ include("db/vocab_words.php");
 include("db/vocab_lists.php");
 
 $listname = getVocabListName($vocab_list_id);
-$vocab_words = getVocab_words($vocab_list_id);
-$vocab_list = getVocabList($vocab_list_id);
+$_SESSION['vocab_words'] = getVocab_words($vocab_list_id);
+$_SESSION['vocab_list']  = getVocabList($vocab_list_id);
+$_SESSION['num_wrong'] = 0;
+$_SESSION['num_questions'] = 0;
 
 
 ?>
-<pre><?=print_r($vocab_list);?></pre>
