@@ -28,10 +28,10 @@ do {
 // randomize answers
 shuffle($answers);
 
-if(!isset($_SESSION['user']) && count($_SESSION['wordlist']) == count($_SESSION['vocab_words'])){
+//if(!isset($_SESSION['user']) && count($_SESSION['wordlist']) == count($_SESSION['vocab_words'])){
     // user is not logged in and hasn't gotten any answers correct yet
     $login_alert = true;
-}
+//}
 
 
 include("header.php");
