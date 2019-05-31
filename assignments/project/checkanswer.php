@@ -17,5 +17,18 @@ if($answer == $question['english_word']){
     // add question back to end of the array
     array_push($_SESSION['vocab_words'], $question);
 }
-header("Location: quiz.php");
+
+if(count($_SESSION['vocab_words']) == 0){
+    // quiz is over, save results to the database
+    
+    
+    //send to congrats page
+    header("Location: congrats.php");
+} else {
+    // quiz is not over, send back to a question page.
+    header("Location: quiz.php");
+}
+
 ?>
+
+

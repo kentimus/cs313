@@ -39,6 +39,8 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
+                <p>You have <?=count($_SESSION['vocab_words']);?> questions left.</p>
+                
                 <? if(isset($_SESSION['alert'])){
                     echo $_SESSION['alert'];
                     $_SESSION['alert'] = null;
