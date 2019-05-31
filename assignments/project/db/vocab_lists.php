@@ -46,8 +46,8 @@
         $query = "SELECT english_word FROM vocab_lists
             WHERE id = :id";
         $statement = $db->prepare($query);
-        $statement->bindValue(':id',$id);
-        $statement->execute();
+//        $statement->bindValue(':id',$id);
+//        $statement->execute();
 //        //$vocab_list = $statement->fetch();
 //        while($row = $statement->fetch()){
 //            echo $row['english_word'];
