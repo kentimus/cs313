@@ -39,7 +39,7 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <? if(isset($_SESSION['alert']){
+                <? if(isset($_SESSION['alert'])){
                     echo $_SESSION['alert'];
                     $_SESSION['alert'] = null;
                 } ?>
