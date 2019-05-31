@@ -30,6 +30,8 @@ shuffle($answers);
 
 if(!isset($_SESSION['logged_in'])){
     $login_alert = true;
+} else {
+    $login_alert = false;
 }
 
 
@@ -42,6 +44,12 @@ include("header.php");
             <div class="col-md-12">
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
+                
+                <? if($login_alert){ ?>
+                <div class="alert alert-info">
+                    <p>You are not <a href="log_in.php">logged in</a>. You don't have to log in to take theh quiz, but if you are not logged in, your results will not be saved.</p>
+                </div>
+                <? } ?>
                 
                 <p>You have <?=count($_SESSION['vocab_words']);?> questions left.</p>
                 
