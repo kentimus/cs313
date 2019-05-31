@@ -33,15 +33,13 @@
         $statement->bindValue(':vocab_list_id',$vocab_list_id);
         
         $statement->execute();
-//        //$vocab_list = $statement->fetch();
         $rows = $statement->fetchAll();
         foreach($rows as $row){
-            echo $row['english_word'];
-            echo "<br>";
+            $words[] = $row['english_word'];
         }
         echo print_r($rows);
         $statement->closeCursor();
         
-        //return $vocab_list;
+        return $words;
     }
 ?>

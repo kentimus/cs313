@@ -17,3 +17,4 @@ $_SESSION['word_list'] = getVocabListEnglishWords($vocab_list_id);
 
 //header("Location: quiz.php");
 ?>
+<pre><?=print_r($_SESSION['word_list'];?></pre>
