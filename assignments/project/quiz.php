@@ -13,16 +13,18 @@ $vocab_list_id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $current_question = $_SESSION['vocab_words'][0];
 
+$wordlist = $_SESSION['word_list'];
+
 // get correct answer
 $answers[0] = $_SESSION['vocab_words'][0]['english_word']; 
 
 // get two wrong answers from the word list
 do {
-  $answers[1] = $_SESSION['word_list'][rand(0,(count($_SESSION['word_list'])-1)];
-} while ($answers[1] == $answers[0]);
-do {
-  $answers[2] = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
-} while ($answers[2] == $answers[1] || $answers[2] == $answers[0]);
+    shuffle($_SESSION['word_list']);
+    $answers[1] = $_SESSION['word_list'][1];
+    $answers[2] = $_SESSION['word_list'][2];
+} while ($answers[1] == $answers[0] || $answers[2] == $answers[0]);
+
 
 
 include("header.php");
