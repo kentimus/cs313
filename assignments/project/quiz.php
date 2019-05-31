@@ -14,7 +14,7 @@ $vocab_list_id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 $current_question = $_SESSION['vocab_words'][0];
 
 $wordlist = $_SESSION['word_list'];
-
+$_SESSION['vocab_words']
 // get correct answer
 $answers[0] = $_SESSION['vocab_words'][0]['english_word']; 
 
@@ -28,6 +28,11 @@ do {
 // randomize answers
 shuffle($answers);
 
+if(!isset($_SESSION['user']) && count($_SESSION['wordlist']) == count($_SESSION['vocab_words'])){
+    // user is not logged in and hasn't gotten any answers correct yet
+    $login_alert = true;
+}
+
 
 include("header.php");
 ?>
@@ -38,6 +43,12 @@ include("header.php");
             <div class="col-md-12">
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
+                
+                <? if(isset($login_alert)){ ?>
+                <div class="alert alert-info">
+                    <p>You are not <a href="log_in.php">logged in</a>. You can still take the quiz, but if you are not logged in your quiz results will not be saved.</p>
+                </div>
+                <? } ?>
                 
                 <p>You have <?=count($_SESSION['vocab_words']);?> questions left.</p>
                 
