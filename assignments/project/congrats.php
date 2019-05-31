@@ -15,9 +15,10 @@ $percent_right = $num_right / $_SESSION['num_questions'];
             <div class="col-md-12">
                 <h1>Congratulations!</h1>
                 
-                <p>You got <?=num_right;?> out of <?=$_SESSION['num_questions'];?> questions correct!</p>
+                <p>You got <?=$num_right;?> out of <?=$_SESSION['num_questions'];?> questions correct!</p>
                 
                 <p>(That's <?=round($percent_right,2);?>%!)</p>
+                <p>(That's <?=$percent_right;?>%!)</p>
                 
                 <p><a class="btn btn-primary" href="index.php">Choose another quiz</a></p>
             </div>
