@@ -13,18 +13,16 @@ $vocab_list_id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $current_question = $_SESSION['vocab_words'][0];
 
-$correct_answer = $_SESSION['vocab_words'][0]['english_word'];
+// get correct answer
+$answers[0] = $_SESSION['vocab_words'][0]['english_word']; 
 
 // get two wrong answers from the word list
-//$wrong1 = "";
-//$wrong2 = "";
-
 do {
-  $wrong1 = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
-} while ($wrong1 == $correct_answer);
+  $answers[1] = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
+} while ($answers[1] == $answers[0]);
 do {
-  $wrong2 = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
-} while ($wrong2 == $correct_answer || $wrong2 == $wrong1);
+  $answers[2] = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
+} while ($answers[2] == $answers[1] || $answers[2] == $answers[0]);
 
 
 include("header.php");
@@ -37,7 +35,7 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <p><?=$wrong1;?> <?=$wrong2;?></p>
+                <pre><?=print_r($answers);?></pre>
                 <p><?=count($_SESSION['vocab_words']);?></p>
                 
                 <p>Translate:</p>
