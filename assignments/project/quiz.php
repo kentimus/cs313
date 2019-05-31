@@ -44,11 +44,11 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
-                <? if(isset($login_alert)){ ?>
+                <? // if(isset($login_alert)){ ?>
                 <div class="alert alert-info">
                     <p>You are not <a href="log_in.php">logged in</a>. You can still take the quiz, but if you are not logged in your quiz results will not be saved.</p>
                 </div>
-                <? } ?>
+                <? // } ?>
                 
                 <p>You have <?=count($_SESSION['vocab_words']);?> questions left.</p>
                 
