@@ -13,9 +13,9 @@ if($answer == $question['english_word']){
     $foreign_word = $question['word'];
     $english_word = $question['english_word'];
     $_SESSION['alert'] = "<div class='alert alert-warning'>Nope. The correct translation of <em>$foreign_word</em> is <em>$english_word</em></div>";
+    
+    // add question back to end of the array
+    array_push($_SESSION['vocab_words'], $question);
 }
+header("Location: quiz.php");
 ?>
-
-<pre><?=print_r($question);?></pre>
-
-<?=$_SESSION['alert'];?>

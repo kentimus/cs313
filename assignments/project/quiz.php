@@ -39,6 +39,11 @@ include("header.php");
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
+                <? if(isset($_SESSION['alert']){
+                    echo $_SESSION['alert'];
+                    $_SESSION['alert'] = null;
+                } ?>
+                
                 <p>Translate:</p>
                 <p class="question"><?=$current_question['word'];?></p>
                 
