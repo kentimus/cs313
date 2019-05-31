@@ -18,7 +18,7 @@ $answers[0] = $_SESSION['vocab_words'][0]['english_word'];
 
 // get two wrong answers from the word list
 do {
-  $answers[1] = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
+  $answers[1] = $_SESSION['word_list'][rand(0,(count($_SESSION['word_list'])-1)];
 } while ($answers[1] == $answers[0]);
 do {
   $answers[2] = $_SESSION['word_list'][rand(0,count($_SESSION['word_list']))];
