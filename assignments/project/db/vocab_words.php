@@ -39,6 +39,7 @@
             echo $row['english_word'];
             echo "<br>";
         }
+        echo print_r($rows);
         $statement->closeCursor();
         
         //return $vocab_list;
