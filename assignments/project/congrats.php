@@ -6,7 +6,7 @@ $db = get_db();
 include("header.php");
 
 $num_right = $_SESSION['num_questions'] - $_SESSION['num_wrong'];
-$percent_right = $num_right / $_SESSION['num_questions'];
+$percent_right = ($num_right / $_SESSION['num_questions']) * 100;
 ?>
 
 <section class="container-fluid">
@@ -18,7 +18,6 @@ $percent_right = $num_right / $_SESSION['num_questions'];
                 <p>You got <?=$num_right;?> out of <?=$_SESSION['num_questions'];?> questions correct!</p>
                 
                 <p>(That's <?=round($percent_right,2);?>%!)</p>
-                <p>(That's <?=$percent_right;?>%!)</p>
                 
                 <p><a class="btn btn-primary" href="index.php">Choose another quiz</a></p>
             </div>
