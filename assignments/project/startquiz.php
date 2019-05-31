@@ -10,7 +10,8 @@ include("db/vocab_lists.php");
 
 $listname = getVocabListName($vocab_list_id);
 $vocab_words = getVocab_words($vocab_list_id);
+$vocab_list = getVocabList($vocab_list_id);
 
 
 ?>
-<pre><?=print_r($vocab_words);?></pre>
+<pre><?=print_r($vocab_list);?></pre>

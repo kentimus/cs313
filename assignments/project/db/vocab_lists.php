@@ -26,4 +26,17 @@
         $statement->closeCursor();
         return $row['name'];
     }
+
+    function getVocabList($id){
+        global $db;
+        $query = "SELECT * FROM vocab_lists
+            WHERE id = :id";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':id',$id);
+        $statement->execute();
+        $statement->closeCursor();
+        $vocab_list = $statement->fetch();
+        return $vocab_list;
+    }
+    
 ?>
