@@ -28,6 +28,10 @@ do {
 // randomize answers
 shuffle($answers);
 
+if(!isset($_SESSION['logged_in'])){
+    $login_alert = true;
+}
+
 
 include("header.php");
 ?>
