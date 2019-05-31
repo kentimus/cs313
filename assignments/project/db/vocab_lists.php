@@ -49,10 +49,10 @@
         $statement->bindValue(':id',$id);
         $statement->execute();
 //        $vocab_list = $statement->fetch();
-        while($row = $statement->fetch()){
-            echo $row['english_word'];
-            echo "<br>";
-        }
+//        while($row = $statement->fetch()){
+//            echo $row['english_word'];
+//            echo "<br>";
+//        }
         $statement->closeCursor();
         
         //return $vocab_list;
