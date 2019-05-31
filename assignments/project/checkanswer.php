@@ -27,6 +27,8 @@ if($answer == $question['english_word']){
 if(count($_SESSION['vocab_words']) == 0){
     // quiz is over, save results to the database
     
+    // unset alert
+    $_SESSION['alert'] = null;
     
     //send to congrats page
     header("Location: congrats.php");
