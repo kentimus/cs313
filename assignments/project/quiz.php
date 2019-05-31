@@ -28,10 +28,11 @@ do {
 // randomize answers
 shuffle($answers);
 
+$login_alert = false;
 if(!isset($_SESSION['logged_in'])){
-    $login_alert = true;
-} else {
-    $login_alert = false;
+    if(count($wordlist) == count($_SESSION['vocab_words'])){
+        $login_alert = true;   
+    }
 }
 
 
