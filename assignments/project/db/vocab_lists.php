@@ -34,8 +34,9 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':id',$id);
         $statement->execute();
-        $statement->closeCursor();
         $vocab_list = $statement->fetch();
+        $statement->closeCursor();
+        
         return $vocab_list;
     }
     
