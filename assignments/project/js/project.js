@@ -7,7 +7,9 @@ $(document).ready(function(){
      
     });
     
-    $("#update-email-form").on("submit", function(){
+    $("#update-email-form").on("submit", function(event){
+        event.preventDefault();
+        
         var user_id = $("#user_id").val();
         var email   = $("#new-email").val();
         
