@@ -1,7 +1,18 @@
 <div class="row">
     <div class="col-md-6">
         <p>Username : <?=$_SESSION['user']['username'];?></p>
-        <p id="profile-email">Email : <?=$_SESSION['user']['email'];?> <a href="#" id="update-email" class="btn btn-small btn-primary">Update Email</a></p>
+        <p id="profile-email">Email : <?=$_SESSION['user']['email'];?> <a href="#" id="update-email" class="btn btn-sm btn-primary">Update Email</a></p>
+        
+        <form id="update-email">
+            <input type="hidden" id="user_id" value="<?=$_SESSION['user']['id'];?>">
+            <p>
+                <label for="new-email">Update email address</label>
+                <input type="text" class="form-control" id="new-email" value="<?=$_SESSION['user']['email'];?>">
+            </p>
+            <p>
+                <input type="submit" class="btn btn-primary" value="update email">
+            </p>
+        </form>
     </div>
     <div class="col-md-6">
         <h2>Quiz History</h2>
