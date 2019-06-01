@@ -9,6 +9,7 @@ $(document).ready(function(){
     
     $("#update-email-form").on("submit", function(event){
         event.preventDefault();
+        alert("hi");
         
         var user_id = $("#user_id").val();
         var email   = $("#new-email").val();
