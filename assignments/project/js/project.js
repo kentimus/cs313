@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    alert("hello");
-    
     $(".flippable").click(function(){
         $(this).toggleClass("flipme");
     });
@@ -24,4 +22,4 @@ $(document).ready(function(){
             }, 'html'
         );
     });
-}
+});
