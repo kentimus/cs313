@@ -12,41 +12,41 @@
         return $quiz_count;
     }
 
-    function add_quiz_results($vocab_list_id, $user_id, $score){
-        global $db;
-        $query = "INSERT INTO users
-            (username, email, password)
-            VALUES (:username, :email, :password)";
-        //$statement = $db->prepare($query);
-//        $statement->bindValue(':username',$data['username']);
-//        $statement->bindValue(':email',$data['username']);
-//        $statement->bindValue(':password',$data['password']);
-//        $statement->execute();
-//        $user = $statement->fetch();
-//        $statement->closeCursor();
-//        if(count($user) > 1){
-//            return $user;
-//        } else {
-//            return false;
-//        }
-        echo  "<p>$vocab_list_id, $user_id, $score</p>";
-    }
-
 //    function add_quiz_results($vocab_list_id, $user_id, $score){
 //        global $db;
-//        $date = date("Y-m-d");
-//        
-//        $query = "INSERT INTO quiz_results
-//            (vocab_list_id, user_id, score, date)
-//            VALUES (:vocab_list_id, :user_id, :score, :date)";
-////        $statement = $db->prepare($query);
-////        $statement->bindValue(':vocab_list_id',$vocab_list_id);
-////        $statement->bindValue(':user_id',$user_id);
-////        $statement->bindValue(':score',$score);
-////        $statement->bindValue(':date',$date);
+//        $query = "INSERT INTO users
+//            (username, email, password)
+//            VALUES (:username, :email, :password)";
+//        //$statement = $db->prepare($query);
+////        $statement->bindValue(':username',$data['username']);
+////        $statement->bindValue(':email',$data['username']);
+////        $statement->bindValue(':password',$data['password']);
 ////        $statement->execute();
+////        $user = $statement->fetch();
 ////        $statement->closeCursor();
-////        return $db->lastInsertId();
-//        echo "Hallo!!!";
+////        if(count($user) > 1){
+////            return $user;
+////        } else {
+////            return false;
+////        }
+//        echo  "<p>$vocab_list_id, $user_id, $score</p>";
 //    }
+
+    function add_quiz_results($vocab_list_id, $user_id, $score){
+        global $db;
+        $date = date("Y-m-d");
+        
+        $query = "INSERT INTO quiz_results
+            (vocab_list_id, user_id, score, date)
+            VALUES (:vocab_list_id, :user_id, :score, :date)";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':vocab_list_id',$vocab_list_id);
+        $statement->bindValue(':user_id',$user_id);
+        $statement->bindValue(':score',$score);
+        $statement->bindValue(':date',$date);
+        $statement->execute();
+        $statement->closeCursor();
+        return $db->lastInsertId();
+        echo "Hallo!!!";
+    }
 ?>
