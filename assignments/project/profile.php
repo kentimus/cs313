@@ -15,15 +15,15 @@ $quiz_history = get_quiz_history($_SESSION['user']['id']);
         <div class="row">
             <div class="col-md-12">
                 <h1>Your Profile</h1>
-                <? 
-                if(isset($_SESSION['user'])){ 
-                    include("profile_logged_in.php");
-                } else {
-                    include("profile_not_logged_in.php");
-                }
-                ?>
             </div>
         </div>
+        <? 
+        if(isset($_SESSION['user'])){ 
+            include("profile_logged_in.php");
+        } else {
+            include("profile_not_logged_in.php");
+        }
+        ?>
     </div>
 </section>
 
