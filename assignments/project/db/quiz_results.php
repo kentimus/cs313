@@ -17,7 +17,7 @@
         $query = "INSERT INTO users
             (username, email, password)
             VALUES (:username, :email, :password)";
-        $statement = $db->prepare($query);
+        //$statement = $db->prepare($query);
 //        $statement->bindValue(':username',$data['username']);
 //        $statement->bindValue(':email',$data['username']);
 //        $statement->bindValue(':password',$data['password']);
@@ -29,6 +29,7 @@
 //        } else {
 //            return false;
 //        }
+        echo  "Hello!";
     }
 
 //    function add_quiz_results($vocab_list_id, $user_id, $score){
