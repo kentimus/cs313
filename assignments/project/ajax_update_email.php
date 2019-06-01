@@ -11,5 +11,5 @@ include("db/users.php");
 update_email($user);
 
 //echo "Email : " . $user['email'];
-echo $db->last_query();
+//echo $db->last_query();
 ?>

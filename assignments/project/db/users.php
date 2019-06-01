@@ -45,6 +45,7 @@ function update_email($data){
     $statement->bindValue(':id',$data['id']);
     $statement->bindValue(':email',$data['email']);
     $statement->execute();
+    echo $statement->queryStr;
     $statement->closeCursor();
 }
 ?>
