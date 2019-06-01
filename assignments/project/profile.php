@@ -17,7 +17,7 @@ $quiz_history = get_quiz_history($_SESSION['user']['id']);
                 <h1>Your Profile</h1>
                 <? 
                 if(isset($_SESSION['user'])){ 
-                    includ("profile_logged_in.php");
+                    include("profile_logged_in.php");
                 } else {
                     include("profile_not_logged_in.php");
                 }
