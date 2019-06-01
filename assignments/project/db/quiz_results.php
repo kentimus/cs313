@@ -18,13 +18,14 @@
         $query = "INSERT INTO quiz_results
             (vocab_list_id, user_id, score, date)
             VALUES (:vocab_list_id, :user_id, :score, :date)";
-//        $statement = $db->prepare($query);
-//        $statement->bindValue(':vocab_list_id',$vocab_list_id);
-//        $statement->bindValue(':user_id',$user_id);
-//        $statement->bindValue(':score',$score);
+        $statement = $db->prepare($query);
+        $statement->bindValue(':vocab_list_id',$vocab_list_id);
+        $statement->bindValue(':user_id',$user_id);
+        $statement->bindValue(':score',$score);
 //        $statement->bindValue(':date',$date);
 //        $statement->execute();
 //        $statement->closeCursor();
 //        return $db->lastInsertId();
+        echo "Hallo!!!";
     }
 ?>
