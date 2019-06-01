@@ -29,7 +29,7 @@ do {
 shuffle($answers);
 
 $login_alert = false;
-if(!isset($_SESSION['logged_in'])){
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     if(count($wordlist) == count($_SESSION['vocab_words'])){
         $login_alert = true;   
     }
