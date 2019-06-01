@@ -15,9 +15,15 @@
     function add_quiz_results($vocab_list_id, $user_id, $score){
         global $db;
         $date = date("Y-m-d");
-        $query = "INSERT INTO quiz_results
-            (vocab_list_id, user_id, score, date)
-            VALUES (:vocab_list_id, :user_id, :score, :date)";
+        
+        $query = "INSERT INTO wishlists
+                    (user_id, item_id)
+                  VALUES
+                    (:user_id, :item_id)";
+        $statement = $db->prepare($query);
+//        $query = "INSERT INTO quiz_results
+//            (vocab_list_id, user_id, score, date)
+//            VALUES (:vocab_list_id, :user_id, :score, :date)";
 //        $statement = $db->prepare($query);
 //        $statement->bindValue(':vocab_list_id',$vocab_list_id);
 //        $statement->bindValue(':user_id',$user_id);
