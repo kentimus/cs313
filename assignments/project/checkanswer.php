@@ -26,6 +26,13 @@ if($answer == $question['english_word']){
 
 if(count($_SESSION['vocab_words']) == 0){
     // quiz is over, save results to the database
+    include("db/quiz_results.php");
+    $num_right = $_SESSION['num_questions'] - $_SESSION['num_wrong'];
+    $percent_right = ($num_right / $_SESSION['num_questions']) * 100;
+    $score = round($percent_right,2);
+    
+    add_quiz_results($vocab_list_id, $user_id, $score)
+    add_quiz_results($_SESSION['vocab_list']['id'], $_SESSION['user']['id'], $score);
     echo "<pre>";
     echo print_r($_SESSION);
     echo "</pre>";
