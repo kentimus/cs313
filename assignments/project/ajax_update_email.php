@@ -10,5 +10,6 @@ $user['id'] = $_SESSION['user']['id'];
 include("db/users.php");
 update_email($user);
 
-echo "Email : " . $user['email'];
+//echo "Email : " . $user['email'];
+echo $db->last_query();
 ?>
