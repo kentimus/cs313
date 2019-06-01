@@ -4,5 +4,19 @@ $(document).ready(function(){
     });
     
     $("#update-email").on("click", function(){
-        
+     
     });
+    
+    $("#update-email-form").on("submit", function(){
+        var user_id = $("#user_id").val();
+        var email   = $("#new-email").val();
+        
+        $.post('ajax_update_email.php', {
+                'user_id' : user_id,
+                'email' : email
+            } , function(data){
+                $("#profile-email").html(data);
+            }, 'html'
+        );
+    });
+}
