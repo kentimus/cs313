@@ -29,7 +29,7 @@
 //        } else {
 //            return false;
 //        }
-        echo  "Hello!";
+        echo  "<p>$vocab_list_id, $user_id, $score</p>";
     }
 
 //    function add_quiz_results($vocab_list_id, $user_id, $score){
