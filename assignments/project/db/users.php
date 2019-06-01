@@ -24,7 +24,7 @@ function addUser($data){
         VALUES (:username, :email, :password)";
     $statement = $db->prepare($query);
     $statement->bindValue(':username',$data['username']);
-    $statement->bindValue(':email',$data['username']);
+    $statement->bindValue(':email',$data['email']);
     $statement->bindValue(':password',$data['password']);
     $statement->execute();
     $user = $statement->fetch();
@@ -34,5 +34,18 @@ function addUser($data){
     } else {
         return false;
     }
+}
+
+function update_email($data){
+    global $db;
+    $query = "UPDATE users
+        SET email = :email
+        WHERE id = :id
+        LIMIT 1";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':id',$data['id']);
+    $statement->bindValue(':email',$data['email']);
+    $statement->execute();
+    $statement->closeCursor();
 }
 ?>

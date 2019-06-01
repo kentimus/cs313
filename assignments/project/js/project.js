@@ -19,6 +19,7 @@ $(document).ready(function(){
                 'email' : email
             } , function(data){
                 $("#profile-email").html(data);
+                $("#update-email-form").fadeOut();
             }, 'html'
         );
     });
