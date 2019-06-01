@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-6">
         <p>Username : <?=$_SESSION['user']['username'];?></p>
-        <p>Email : <?=$_SESSION['user']['email'];?></p>
+        <p id="profile-email">Email : <?=$_SESSION['user']['email'];?> <a href="#" id="update-email" class="btn btn-small btn-primary">Update Email</a></p>
     </div>
     <div class="col-md-6">
         <h2>Quiz History</h2>
