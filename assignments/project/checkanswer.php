@@ -44,7 +44,7 @@ if(count($_SESSION['vocab_words']) == 0){
     $_SESSION['alert'] = null;
     
     //send to congrats page
-    //header("Location: congrats.php");
+    header("Location: congrats.php");
 } else {
     // quiz is not over, send back to a question page.
     header("Location: quiz.php");

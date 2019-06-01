@@ -12,26 +12,6 @@
         return $quiz_count;
     }
 
-//    function add_quiz_results($vocab_list_id, $user_id, $score){
-//        global $db;
-//        $query = "INSERT INTO users
-//            (username, email, password)
-//            VALUES (:username, :email, :password)";
-//        //$statement = $db->prepare($query);
-////        $statement->bindValue(':username',$data['username']);
-////        $statement->bindValue(':email',$data['username']);
-////        $statement->bindValue(':password',$data['password']);
-////        $statement->execute();
-////        $user = $statement->fetch();
-////        $statement->closeCursor();
-////        if(count($user) > 1){
-////            return $user;
-////        } else {
-////            return false;
-////        }
-//        echo  "<p>$vocab_list_id, $user_id, $score</p>";
-//    }
-
     function add_quiz_results($vocab_list_id, $user_id, $score){
         global $db;
         $date = date("Y-m-d");
@@ -47,6 +27,21 @@
         $statement->execute();
         $statement->closeCursor();
         return $db->lastInsertId();
-        echo "Hallo!!!";
+    }
+
+    function get_quiz_history($user_id){
+        global $db;
+        $query = "SELECT quiz_results.score, quiz_results.date, vocab_lists.name 
+            FROM quiz_results
+            LEFT JOIN vocab_lists
+            ON quiz_results.vocab_list_id = vocab_lists.id
+            WHERE quiz_results.user_id =  :user_id
+            ORDER BY quiz_results.vocab_list_id, date DESC";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':user_id', $user_id);
+        $statement->execute();
+        $history = $statement->fetchAll();
+        $statement->closeCursor();
+        return $history;
     }
 ?>
