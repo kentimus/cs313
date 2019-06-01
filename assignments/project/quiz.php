@@ -29,6 +29,8 @@ do {
 shuffle($answers);
 
 $login_alert = false;
+// set up log in alert if this is the first questions
+// (or they haven't answered any questions correctly yet)
 if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
     if(count($wordlist) == count($_SESSION['vocab_words'])){
         $login_alert = true;   
