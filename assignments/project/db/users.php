@@ -40,8 +40,7 @@ function update_email($data){
     global $db;
     $query = "UPDATE users
         SET email = :email
-        WHERE id = :id
-        LIMIT 1";
+        WHERE id = :id";
     $statement = $db->prepare($query);
     $statement->bindValue(':id',$data['id']);
     $statement->bindValue(':email',$data['email']);
