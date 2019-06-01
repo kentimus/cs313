@@ -4,7 +4,8 @@ $(document).ready(function(){
     });
     
     $("#update-email").on("click", function(){
-     
+        $("#update-email-form").fadeIn();
+        $("#profile-email").fadeOut();
     });
     
     $("#update-email-form").on("submit", function(event){
@@ -18,6 +19,7 @@ $(document).ready(function(){
                 'user_id' : user_id,
                 'email' : email
             } , function(data){
+                $("#profile-email").fadeIn();
                 $("#profile-email").html(data);
                 $("#update-email-form").fadeOut();
             }, 'html'
