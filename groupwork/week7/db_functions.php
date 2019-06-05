@@ -2,7 +2,7 @@
     function add_user($username, $password){
         global $db;
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
-        $query = "INSERT INTO users
+        $query = "INSERT INTO group7users
             (username, password)
             VALUES (:username, :password)";
         $statement = $db->prepare($query);
