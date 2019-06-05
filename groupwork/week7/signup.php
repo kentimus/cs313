@@ -6,7 +6,7 @@ $db = get_db();
 include("db_functions.php");
 
 $password_class = "";
-if(isset($_SESSION['password_error']){
+if(isset($_SESSION['password_error'])){
     $password_class = "password-error";
 }
 ?>
@@ -51,7 +51,7 @@ if(isset($_SESSION['password_error']){
     </body>
 </html>
 <?
-if(isset($_SESSION['password_error']){
+if(isset($_SESSION['password_error'])){
     unset($_SESSION['password_error']);
 }
 ?>
