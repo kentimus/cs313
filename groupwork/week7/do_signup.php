@@ -14,24 +14,24 @@ $confirmpassword = filter_var($_POST['confirmpassword'], FILTER_SANITIZE_STRING)
 $pattern = '/^(?=.*[[:digit:]])[[:print:]]{8,}$/';
 
 
-if(preg_match($pattern, $password)){
-    echo "matches pattern";
-} else {
-    echo "does not match";
-}
+if(!preg_match($pattern, $password)){
+    $_SESSION['alert'] = "<div class='alert alert-success'>You must match the pattern.</div>";
+    header("Location: signup.php");
+    die();
+} 
 
 
 if($password == $confirmpassword){
     add_user($username, $password);
 
     $_SESSION['alert'] = "<div class='alert alert-success'>Yeah! You signed up. Now sign in.</div>";
-//    header("Location: signin.php");
-//    die();
+    header("Location: signin.php");
+    die();
 } else {
     $_SESSION['alert'] = "<div class='alert alert-warning'>Your passwords did not match.</div>";
     $_SESSION['password_error'] = true;
-//    header("Location: signup.php");
-//    die();
+    header("Location: signup.php");
+    die();
 }
 
 ?>
