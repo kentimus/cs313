@@ -55,7 +55,9 @@ if(isset($_SESSION['password_error'])){
   crossorigin="anonymous"></script>
         <script>
         $(document).ready(function()){
+            alert("hello js");
             $("#signupform").on("submit",function(event){
+                event.preventDefault();
                 if($("#form-password").val() == $("#form-confirmpassword").val()){
                     return true;
                 } else {
