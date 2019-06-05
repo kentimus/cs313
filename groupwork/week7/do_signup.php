@@ -10,6 +10,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
 add_user($username, $password);
 
+$_SESSION['alert'] = "<div class='alert alert-info'>Yeah! You signed up. Now sign in.</div>";
 header("Location: signin.php");
 die();
 ?>
