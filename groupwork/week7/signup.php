@@ -35,8 +35,8 @@ if(isset($_SESSION['password_error'])){
                         <input type="text" class="form-control" id="form-username" name="username">
                     </div>
                     <div>
-                        <label for="form-password" class="<?=$password_class;?>">Password</label>
-                        <input type="password" class="form-control" id="form-password" name="password" required pattern="(?=.*\d).{7,}$">
+                        <label for="form-password" class="<?=$password_class;?>">Password (at least 7 characters and at least one number)</label>
+                        <input type="password" class="form-control" id="form-password" name="password">
                     </div>
                     <div>
                         <label for="form-confirmpassword" class="<?=$password_class;?>">Confirm Password</label>
