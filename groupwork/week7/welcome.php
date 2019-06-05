@@ -8,7 +8,7 @@
     <body>
         <section class="container">
             <div class="col-md-6 offset-md-3">
-                <h1>Welcome <?=$_SESSION['username'];?></h1>
+                <h1>Welcome <?=$_SESSION['user']['username'];?></h1>
                 
                 (<a href="signout.php">log out</a>)
             </div>
