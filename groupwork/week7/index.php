@@ -9,5 +9,6 @@ if(isset($_SESSION['logged_in']) &&  $_SESSION['logged_in'] == true){
     include("views/welcome.php");
 } else {
     header("Location: signin.php");
+    die();
 }
 ?>
