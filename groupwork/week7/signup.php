@@ -54,7 +54,7 @@ if(isset($_SESSION['password_error'])){
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
         <script>
-        $(document).ready(function()){
+        $(document).ready(function(){
             alert("hello js");
             $("#signupform").on("submit",function(event){
                 event.preventDefault();
