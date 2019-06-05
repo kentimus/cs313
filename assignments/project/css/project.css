@@ -5,7 +5,7 @@ section {
   height: 100vh; }
 
 #hero-homepage {
-  background: url(../images/map.jpg);
+/*  background: url(../images/map.jpg);*/
   background-attachment: fixed;
   background-size: cover; }
 
@@ -17,6 +17,10 @@ section {
 
 #update-email-form{
     display: none;
+}
+
+footer p{
+    margin: 20px;
 }
 
 
