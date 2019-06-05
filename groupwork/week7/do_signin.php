@@ -11,9 +11,11 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $user = get_user($username);
 
 if(password_verify($password, $user['password'])) {
-    echo "password is correct";
+    $_SESSION['user'] = $user;
+    $_SESSION['logged_in'] = true;
+    header("Location: index.php");
 } else {
-    echo "password is incorrect";
+    $_SESSION['alert'] = "<div class='alert alert-warning'>Oh no! Your username and password didn't match.</div>";
 }
 ?>
 <pre><?=print_r($user);?></pre>

@@ -17,6 +17,13 @@ include("db_functions.php");
             <div class="col-md-6 offset-md-3">
                 <h1>Sign In!</h1>
                 
+                <? 
+                if(isset($_SESSION['alert'])){
+                    echo $_SESSION['alert'];
+                    unset($_SESSION['alert']);
+                }
+                ?>
+                
                 <p>(Not signed up yet? <a href="signup.php">Sign up here</a>)</p>
                 
                 <form action="do_signin.php" method="post">
