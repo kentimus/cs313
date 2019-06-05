@@ -1,5 +1,5 @@
 CREATE TABLE group7users (
   id SERIAL PRIMARY KEY NOT NULL,
   username VARCHAR(80) NOT NULL,
-  password VARCHAR(120) NOT NULL
+  password VARCHAR(255) NOT NULL
 );
