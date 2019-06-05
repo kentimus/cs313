@@ -12,4 +12,17 @@
         $statement->closeCursor();
         return $db->lastInsertId();
     }
+
+    function get_user($username){
+        global $db;
+        $query = "SELECT * 
+            FROM group7users
+            WHERE username = :username";
+        $statement = $db->prepare($query);
+        $statement->bindValue(':username',$username);
+        $statement->execute();
+        $user = $statement->fetch();
+        $statement->closeCursor();
+        return $user;
+    }
 ?>

@@ -19,7 +19,7 @@ include("db_functions.php");
                 
                 <p>(Not signed up yet? <a href="signup.php">Sign up here</a>)</p>
                 
-                <form action="do_login.php" method="post">
+                <form action="do_signin.php" method="post">
                     <div>
                         <label for="form-username">Username</label>
                         <input type="text" class="form-control" id="form-username" name="username">
