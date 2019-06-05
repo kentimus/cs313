@@ -29,14 +29,14 @@ if(isset($_SESSION['password_error'])){
                 }
                 ?>
                 
-                <form action="do_signup.php" method="post">
+                <form id="signupform" action="do_signup.php" method="post">
                     <div>
                         <label for="form-username">Username</label>
                         <input type="text" class="form-control" id="form-username" name="username">
                     </div>
                     <div>
                         <label for="form-password" class="<?=$password_class;?>">Password (at least 7 characters and at least one number)</label>
-                        <input type="password" class="form-control" id="form-password" name="password">
+                        <input type="password" class="form-control" id="form-password" name="password" required pattern="(?=.*\d).{7,}$">
                     </div>
                     <div>
                         <label for="form-confirmpassword" class="<?=$password_class;?>">Confirm Password</label>
@@ -48,6 +48,23 @@ if(isset($_SESSION['password_error'])){
                 </form>
             </div>
         </section>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function()){
+            $("#signupform").on("submit",function(event){
+                if($("#form-password").val() == $("#form-confirmpassword").val()){
+                    return true;
+                } else {
+                    alert("passwords did not match");
+                    return false;
+                }
+            });               
+        });
+        </script>
     </body>
 </html>
 <?
