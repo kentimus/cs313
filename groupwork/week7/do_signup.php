@@ -14,7 +14,7 @@ $confirmpassword = filter_var($_POST['confirmpassword'], FILTER_SANITIZE_STRING)
 $pattern = '/^(?=.*[[:digit:]])[[:print:]]{8,}$/';
 
 
-if(preg_match($pattern, $password){
+if(preg_match($pattern, $password)){
     echo "matches pattern";
 } else {
     echo "does not match";
