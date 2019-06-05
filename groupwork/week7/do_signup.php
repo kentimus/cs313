@@ -9,6 +9,9 @@ $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $confirmpassword = filter_var($_POST['confirmpassword'], FILTER_SANITIZE_STRING);
 
+
+
+
 if($password == $confirmpassword){
     add_user($username, $password);
 
