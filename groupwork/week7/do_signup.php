@@ -9,7 +9,12 @@ $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $confirmpassword = filter_var($_POST['confirmpassword'], FILTER_SANITIZE_STRING);
 
-if(preg_match('(?=.*\d).{7,}', $password){
+
+//$pattern = '/^(?=.*[[:digit:]])(?=.*[[:punct:]])[[:print:]]{8,}$/';
+$pattern = '/^(?=.*[[:digit:]])[[:print:]]{8,}$/';
+
+
+if(preg_match($pattern, $password){
     echo "matches pattern";
 } else {
     echo "does not match";
