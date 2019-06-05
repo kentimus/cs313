@@ -10,6 +10,10 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
 $user = get_user($username);
 
-
+if(password_verify($password, $user['password'])) {
+    echo "password is correct";
+} else {
+    echo "password is incorrect";
+}
 ?>
 <pre><?=print_r($user);?></pre>
