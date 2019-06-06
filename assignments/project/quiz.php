@@ -44,7 +44,7 @@ include("header.php");
 <section class="container-fluid" id="hero-<?=$_SESSION['quiz_id'];?>">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3 quiz-container">
                 
                 
                 

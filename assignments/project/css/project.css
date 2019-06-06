@@ -42,7 +42,7 @@ footer p{
     min-height: 90vh;
 }
 
-section div.container{
+.quiz-container{
     background-color : rgba(255,255,255,.8);
 }
 
