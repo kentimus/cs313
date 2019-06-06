@@ -13,7 +13,7 @@ if(isset($_GET['error']) && $_GET['error'] == 'true'){
 
 <section class="container-fluid" id="hero-homepage">
     <div class="container">
-        <div class="row">
+        <div class="row page-header">">
             <div class="col-md-12">
                 <h1>Log In</h1>
             </div>
