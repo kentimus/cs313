@@ -26,17 +26,17 @@ footer p{
 #hero-1{
     background: url(../images/thumbs/1.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover; 
 }
 #hero-2{
     background: url(../images/thumbs/2.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover; 
 }
 #hero-3{
     background: url(../images/thumbs/3.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover; 
 }
 
 
