@@ -9,7 +9,7 @@ $num_right = $_SESSION['num_questions'] - $_SESSION['num_wrong'];
 $percent_right = ($num_right / $_SESSION['num_questions']) * 100;
 ?>
 
-<section class="container-fluid" id="hero-<?=$_SESSION['vocab_list_id'];?>">
+<section class="container-fluid" id="hero-homepage"">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
