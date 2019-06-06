@@ -16,11 +16,14 @@ $vocab_words = getVocab_words($vocab_list_id);
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1><?=$listname;?></h1>
             
-            <p>Click on a card to see it's translation.</p>
-            
-            <p>When you are ready to quiz yourself, click <a class="btn btn-primary" href="startquiz.php?id=<?=$vocab_list_id;?>">quiz me!</a></p>
+            <div class="page-header">
+                <h1><?=$listname;?></h1>
+
+                <p>Click on a card to see it's translation.</p>
+
+                <p>When you are ready to quiz yourself, click <a class="btn btn-primary" href="startquiz.php?id=<?=$vocab_list_id;?>">quiz me!</a></p>
+            </div>
             
             <? foreach($vocab_words as $vw){ ?> 
                 <div class="flip-container">
