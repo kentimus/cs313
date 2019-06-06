@@ -5,7 +5,7 @@ section {
   height: 100vh; }
 
 #hero-homepage {
-/*  background: url(../images/map.jpg);*/
+  background: url(../images/germany.jpg);
   background-attachment: fixed;
   background-size: cover; }
 
@@ -21,6 +21,22 @@ section {
 
 footer p{
     margin: 20px;
+}
+
+#hero-1{
+    background: url(../images/thumbs/1.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+}
+#hero-2{
+    background: url(../images/thumbs/2.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+}
+#hero-3{
+    background: url(../images/thumbs/3.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 }
 
 
