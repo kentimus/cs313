@@ -15,6 +15,8 @@ $percent_right = ($num_right / $_SESSION['num_questions']) * 100;
             <div class="col-md-12">
                 <h1>Congratulations!</h1>
                 
+                <pre><?=print_r($_SESSION);?></pre>
+                
                 <p>You got <?=$num_right;?> out of <?=$_SESSION['num_questions'];?> questions correct!</p>
                 
                 <p>(That's <?=round($percent_right,2);?>%!)</p>
