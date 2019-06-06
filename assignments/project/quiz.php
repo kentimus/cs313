@@ -41,12 +41,12 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false){
 include("header.php");
 ?>
 
-<section class="container-fluid" id="hero-<?=$vocab_list_id;?>">
+<section class="container-fluid" id="hero-<?=$_SESSION['quiz_id'];?>">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 
-                <pre><?=print_r($_SESSION);?></pre>
+                
                 
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
