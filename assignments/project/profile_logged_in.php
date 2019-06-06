@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 page-header">
         <p>Username : <?=$_SESSION['user']['username'];?></p>
         <p id="profile-email">Email : <?=$_SESSION['user']['email'];?> <a href="#" id="update-email" class="btn btn-sm btn-primary">Update Email</a></p>
         
@@ -14,7 +14,7 @@
             </p>
         </form>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 page-header">
         <h2>Quiz History</h2>
         You have taken <?=$quiz_count['quiz_count']; ?> quizzes!
 

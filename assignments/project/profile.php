@@ -10,9 +10,9 @@ $quiz_history = get_quiz_history($_SESSION['user']['id']);
 
 ?>
 <? include("header.php"); ?>
-<section class="container-fluid">
+<section class="container-fluid" id="hero-homepage">
     <div class="container">
-        <div class="row">
+        <div class="row page-header">
             <div class="col-md-12">
                 <h1>Your Profile</h1>
             </div>
