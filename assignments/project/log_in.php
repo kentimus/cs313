@@ -11,7 +11,7 @@ if(isset($_GET['error']) && $_GET['error'] == 'true'){
 ?>
 <? include('header.php'); ?>
 
-<section class="container-fluid">
+<section class="container-fluid" id="hero-homepage">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
