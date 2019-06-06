@@ -46,6 +46,8 @@ include("header.php");
         <div class="row">
             <div class="col-md-12">
                 
+                <pre><?=print_r($_SESSION);?></pre>
+                
                 <h1><?=$_SESSION['vocab_list']['name'];?>Quiz</h1>
                 
                 <? if($login_alert){ ?>
