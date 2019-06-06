@@ -4,7 +4,7 @@ include("db_connect.php");
 $db = get_db();
 
 $password_hash = password_hash('kent', PASSWORD_DEFAULT);
-        $query = "UPDATE INTO users
+        $query = "UPDATE users
             SET password = :password
             WHERE id = 1";
            
