@@ -12,6 +12,7 @@ $listname = getVocabListName($vocab_list_id);
 $vocab_words = getVocab_words($vocab_list_id);
 ?>
 <? include("header.php"); ?>
+<section class="container-fluid" id="hero-<?=$vocab_list_id;?>">
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -37,5 +38,6 @@ $vocab_words = getVocab_words($vocab_list_id);
         </div>
     </div>
 </div>
+</section>
 
 <? include("footer.php"); ?>
