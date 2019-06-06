@@ -24,7 +24,7 @@
             foreach($quiz_history as $qh){ 
                 if($qh['name'] != $quizname){
                     $quizname = $qh['name'];
-                    echo "<tr><td colspan='2'>$quizname</td></tr>";
+                    echo "<tr><td colspan='2' class='stats-quizname'>$quizname</td></tr>";
                 }    
         ?>
             <tr>

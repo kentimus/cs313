@@ -26,6 +26,12 @@ footer p{
     margin: 20px;
 }
 
+.stats-quizname{
+    font-weight: bold;
+    color : white;
+    background-color: darkgreen;
+}
+
 #hero-1{
     background: url(../images/bg/1.jpg);
     background-attachment: fixed;
