@@ -28,6 +28,7 @@ footer p{
     background-attachment: fixed;
     background-size: cover; 
     min-height: 90vh;
+    padding: 30px;
 }
 #hero-2{
     background: url(../images/bg/2.jpg);
